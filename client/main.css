@@ -1,5 +1,19 @@
+.input-box {
+  width: 18.75rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 1.25rem 0;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ccc;
+}
+
 body {
   background-color: #faf8f1;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
 }
