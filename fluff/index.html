@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Predictive Text</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.mjs'
+    </script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+  </head>
+  <body>
+    <h1>Turbo Typer v0.1</h1>
+    <div class="input-container">
+      <textarea
+        type="text"
+        id="input"
+        autocomplete="off">Hello,</textarea>
+      <span id="suggestion"></span>
+    </div>
+    <!-- Script -->
+    <script src="draft.js"></script>
+  </body>
+</html>

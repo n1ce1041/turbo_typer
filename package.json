@@ -3,7 +3,6 @@
   "type": "module",
   "version": "0.2.0",
   "description": "React!",
-  "repository": "https://github.com/dev-academy-challenges/react-boilerplate.git",
   "main": "server/index.js",
   "scripts": {
     "dev": "vite",
@@ -12,16 +11,9 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
   },
-  "eslintConfig": {
-    "extends": "@devacademy/eslint-config/react",
-    "ignorePatterns": [
-      "bundle.js"
-    ]
-  },
-  "author": "Dev Academy Aotearoa",
+  "author": "Tutone",
   "license": "ISC",
   "devDependencies": {
-    "@devacademy/eslint-config": "^1.9.1",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
