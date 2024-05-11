@@ -1,11 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+}
+
 .input-box {
-  width: 18.75rem;
-  height: 2.5rem;
+  width: 100%;
+  height: 60vh; /* Adjust height as needed */
   font-size: 1rem;
   padding: 0.5rem;
   margin: 1.25rem 0;
   border-radius: 0.25rem;
   border: 0.0625rem solid #ccc;
+  resize: none; /* Prevent resizing */
+}
+
+.suggestion-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 1rem; /* Add margin to create space between textarea and suggestions */
+}
+
+.suggestion-item {
+  cursor: pointer;
+  margin-bottom: 0.5rem; /* Add margin between suggestion items */
 }
 
 body {
