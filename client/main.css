@@ -9,10 +9,11 @@
 
 .input-container {
   display: flex;
+  width: 100%;
 }
 
 .input-box {
-  width: 100%;
+  width: 45%; /* Adjust width as needed */
   height: 60vh; /* Adjust height as needed */
   font-size: 1rem;
   padding: 0.5rem;
@@ -22,15 +23,24 @@
   resize: none; /* Prevent resizing */
 }
 
+.suggestion-container {
+  width: 30%; /* Adjust width as needed */
+  height: 60vh; /* Adjust height as needed */
+  margin: 1.25rem 0;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #ccc;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
 .suggestion-list {
   list-style-type: none;
   padding: 0;
-  margin-left: 1rem; /* Add margin to create space between textarea and suggestions */
+  margin: 0;
 }
 
 .suggestion-item {
   cursor: pointer;
-  margin-bottom: 0.5rem; /* Add margin between suggestion items */
+  padding: 0.5rem;
 }
 
 body {
