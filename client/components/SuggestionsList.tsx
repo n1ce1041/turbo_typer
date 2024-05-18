@@ -1,15 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-const SuggestionsList = ({ suggestions }) => {
-  // Group suggestions by their 'group' value
-  const groupedSuggestions = suggestions.reduce((groups, suggestion) => {
-    const group = suggestion.group || 'Uncategorized'
-    if (!groups[group]) {
-      groups[group] = []
-    }
-    groups[group].push(suggestion.phrase)
-    return groups
-  }, {})
+interface Suggestion {
+  phrase: string;
+  group: string;
+}
+
+interface SuggestionsListProps {
+  suggestions: Suggestion[];
+}
+
+const SuggestionsList: React.FC<SuggestionsListProps> = ({ suggestions }) => {
+  const groupedSuggestions = suggestions.reduce<Record<string, string[]>>(
+    (groups, suggestion) => {
+      const group = suggestion.group || 'Uncategorized';
+      if (!groups[group]) {
+        groups[group] = [];
+      }
+      groups[group].push(suggestion.phrase);
+      return groups;
+    },
+    {}
+  );
 
   return (
     <div className="allSuggestions">
@@ -24,7 +35,7 @@ const SuggestionsList = ({ suggestions }) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default SuggestionsList
+export default SuggestionsList;
