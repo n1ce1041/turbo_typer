@@ -1,54 +1,74 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* Title Div */
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  padding: 2rem;
+}
+
+.title {
   width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
 }
 
-.input-container {
+/* Flexbox */
+.secondContainer{
+  margin-top: 1.5rem;
   display: flex;
+}
+
+/* Textarea */
+.textArea {
+  height: 45rem;
+  flex: 1;
+}
+
+.textArea textarea {
+  font-size: 18px;
+  height: 45rem;
   width: 100%;
+  box-sizing: border-box;
+  border: 1px solid blue
 }
 
-.input-box {
-  width: 45%; /* Adjust width as needed */
-  height: 60vh; /* Adjust height as needed */
-  font-size: 1rem;
-  padding: 0.5rem;
-  margin: 1.25rem 0;
-  border-radius: 0.25rem;
-  border: 0.0625rem solid #ccc;
-  resize: none; /* Prevent resizing */
+/* Grid Elements */
+.gridElements {
+  padding-left: 1.5rem;
+  flex: 1;
+  display: grid;
+  grid-template-areas:
+    "suggestions suggestions"
+    "suggestions suggestions"
+    "allsuggestions allsuggestions";
+  gap: 10px;
 }
 
-.suggestion-container {
-  width: 30%; /* Adjust width as needed */
-  height: 60vh; /* Adjust height as needed */
-  margin: 1.25rem 0;
-  border-radius: 0.25rem;
-  border: 0.0625rem solid #ccc;
-  overflow-y: auto; /* Enable vertical scrolling if needed */
+/* Suggestions */
+.suggestions {
+  grid-area: suggestions;
+  background-color: #f0f0f0;
+  text-align: center;
 }
 
-.suggestion-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* AllSuggestions */
+.allSuggestions {
+  grid-area: allsuggestions;
+  background-color: #f0f0f0;
+  text-align: left;
+  padding-left: 1rem;
 }
 
-.suggestion-item {
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-body {
-  background-color: #faf8f1;
-  color: #0a1520;
-  font-family: 'Poppins', sans-serif;
-}
-
-h1 {
+/* References */
+.references {
+  grid-area: references;
+  background-color: #f0f0f0;
+  padding: 10px;
   text-align: center;
 }
