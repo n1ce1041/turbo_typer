@@ -9,7 +9,7 @@ interface SuggestionsListProps {
   suggestions: Suggestion[];
 }
 
-const SuggestionsList: React.FC<SuggestionsListProps> = ({ suggestions }) => {
+const SuggestionsList = ({ suggestions }: SuggestionsListProps) => {
   const groupedSuggestions = suggestions.reduce<Record<string, string[]>>(
     (groups, suggestion) => {
       const group = suggestion.group || 'Uncategorized';
