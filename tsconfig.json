@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["vite/client"],
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "target": "es2020", 
     "jsx": "react-jsx",
     "module": "ES2020",
@@ -12,5 +12,6 @@
     "strict": true,
     "allowImportingTsExtensions": true,
     "skipLibCheck": true
+    
   }
 }
