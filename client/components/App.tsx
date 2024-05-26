@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Fuse from 'fuse.js'
-import SuggestionsList from './SuggestionsList'
+import SuggestionsList from './SuggestionsList/SuggestionsList'
+import TextArea from './TextArea/TextArea'
 import '../main.css'
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
     },
     {
       phrase:
-        '#--------------------stuff.py------------------------------- \n\n#--------------------end of file ---------------------------',
+        '#--------------------snippet------------------------------- \n\n#--------------------end of file ---------------------------',
       group: '!cs',
     },
   ]
@@ -150,14 +151,12 @@ function App() {
         <h1>Turbo Typer</h1>
       </div>
       <div className="secondContainer">
-        <div className="textArea">
-          <textarea
-            value={inputValue}
-            onChange={handleChange}
-            placeholder="Add all of your correspondence in here...."
-            className="input-box"
-          ></textarea>
-        </div>
+        <TextArea
+          inputValue={inputValue}
+          handleChange={handleChange}
+          fuse={fuse}
+          macroFuse={macroFuse}
+        />
         <div className="gridElements">
           <div className="suggestions">
             <ul>
