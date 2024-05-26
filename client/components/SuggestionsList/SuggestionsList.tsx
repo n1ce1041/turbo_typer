@@ -1,24 +1,24 @@
 interface Suggestion {
-  phrase: string;
-  group: string;
+  phrase: string
+  group: string
 }
 
 interface SuggestionsListProps {
-  suggestions: Suggestion[];
+  suggestions: Suggestion[]
 }
 
 const SuggestionsList = ({ suggestions }: SuggestionsListProps) => {
   const groupedSuggestions = suggestions.reduce<Record<string, string[]>>(
     (groups, suggestion) => {
-      const group = suggestion.group || 'Uncategorized';
+      const group = suggestion.group || 'Uncategorized'
       if (!groups[group]) {
-        groups[group] = [];
+        groups[group] = []
       }
-      groups[group].push(suggestion.phrase);
-      return groups;
+      groups[group].push(suggestion.phrase)
+      return groups
     },
     {}
-  );
+  )
 
   return (
     <div className="allSuggestions">
@@ -33,7 +33,7 @@ const SuggestionsList = ({ suggestions }: SuggestionsListProps) => {
         </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default SuggestionsList;
+export default SuggestionsList
