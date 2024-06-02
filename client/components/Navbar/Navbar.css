@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Align with the title background color */
+    color: #fff; /* Align with the title color */
+    padding: 10px 20px; /* Add some padding */
+  }
+  
+  .navbar-menu {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-right: 20px; /* Add spacing between menu items */
+    cursor: pointer;
+    transition: color 0.3s; /* Add transition effect */
+  }
+  
+  .navbar-item:hover {
+    color: #f8f8f8; /* Change color on hover */
+  }  
+  
+  
+  
+  
+  
+  
+  
+  

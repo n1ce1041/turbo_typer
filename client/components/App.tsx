@@ -1,7 +1,11 @@
+// App.tsx
+
 import React, { useState, useEffect } from 'react'
 import Fuse from 'fuse.js'
 import SuggestionsList from './SuggestionsList/SuggestionsList'
 import TextArea from './TextArea/TextArea'
+import Suggestions from './Suggestions/Suggestions'
+import Navbar from './Navbar/Navbar'
 import '../main.css'
 
 function App() {
@@ -138,18 +142,9 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    document.addEventListener('keydown', handleEnterPress)
-    return () => {
-      document.removeEventListener('keydown', handleEnterPress)
-    }
-  }, [suggestions, selectedSuggestionIndex])
-
   return (
     <div className="container">
-      <div className="title div">
-        <h1>Turbo Typer</h1>
-      </div>
+      <Navbar />
       <div className="secondContainer">
         <TextArea
           inputValue={inputValue}
@@ -158,21 +153,14 @@ function App() {
           macroFuse={macroFuse}
         />
         <div className="gridElements">
-          <div className="suggestions">
-            <ul>
-              {suggestions.map((suggestion, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleSuggestionClick(suggestion)}
-                  className={
-                    index === selectedSuggestionIndex ? 'selected' : ''
-                  }
-                >
-                  {suggestion}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Suggestions
+            inputValue={inputValue}
+            suggestions={suggestions}
+            selectedSuggestionIndex={selectedSuggestionIndex}
+            handleSuggestionClick={handleSuggestionClick}
+            handleEnterPress={handleEnterPress}
+            handleChange={handleChange}
+          />
           <SuggestionsList suggestions={words} />
         </div>
       </div>

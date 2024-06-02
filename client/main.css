@@ -5,6 +5,8 @@
 
 .container {
   padding: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .title {
