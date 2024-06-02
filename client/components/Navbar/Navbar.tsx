@@ -1,5 +1,6 @@
 // Navbar.tsx
 import './Navbar.css'
+import { NavLink } from 'react-router-dom'
 import '@fortawesome/fontawesome-free/css/all.css'
 
 const Navbar = () => {
@@ -10,10 +11,17 @@ const Navbar = () => {
       </div>
       <ul className="navbar-menu">
         <li className="navbar-item">
-          <i className="fas fa-home"></i>
+          <NavLink to={'/home'}>
+            <i className="fas fa-home"></i>
+          </NavLink>
         </li>
-        <li className="navbar-item">Options</li>
-        <li className="navbar-item">About</li>
+        <li className="navbar-item">
+          {' '}
+          <NavLink to={'/options'}>Options</NavLink>
+        </li>
+        <li className="navbar-item">
+          <NavLink to={'/about'}>About</NavLink>
+        </li>
       </ul>
     </nav>
   )

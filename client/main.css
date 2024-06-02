@@ -3,6 +3,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   padding: 2rem;
   padding-left: 5rem;

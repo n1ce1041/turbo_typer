@@ -1,7 +1,34 @@
-import { createRoot } from 'react-dom/client'
-
+import ReactDOM from 'react-dom/client'
+import React from 'react'
 import App from './components/App.tsx'
+import Home from './components/Home.tsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Options from './components/Options/Options.tsx'
+import About from './components/About/About.tsx'
 
-document.addEventListener('DOMContentLoaded', () => {
-  createRoot(document.getElementById('app') as HTMLElement).render(<App />)
-})
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/home',
+        element: <Home />,
+      },
+      {
+        path: '/options',
+        element: <Options />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+    ],
+  },
+])
+
+ReactDOM.createRoot(document.getElementById('app')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
