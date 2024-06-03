@@ -113,7 +113,7 @@ function App() {
 
   const handleSuggestionClick = (suggestion: string) => {
     const lines = inputValue.split('\n')
-    let lastLine = lines.pop()
+    let lastLine = lines.pop().trim()
     const lastSpaceIndex = lastLine.lastIndexOf(' ')
     lastLine = lastLine.substring(0, lastSpaceIndex + 1) + suggestion
     const newInputValue = [...lines, lastLine].join('\n')
@@ -131,7 +131,9 @@ function App() {
       setInputValue((prevValue) => prevValue + '\n')
     } else if (event.keyCode === 13) {
       event.preventDefault()
+      console.log('Suggestions length:', suggestions.length)
       if (suggestions.length > 0) {
+        console.log('Calling handleSuggestionClick')
         handleSuggestionClick(suggestions[selectedSuggestionIndex])
       }
     } else if (event.keyCode === 9) {

@@ -6,9 +6,9 @@ interface SuggestionsProps {
   inputValue: string
   suggestions: string[]
   selectedSuggestionIndex: number
-  handleSuggestionClick: (suggestion: string) => void
-  handleEnterPress: (event: any) => void
-  handleChange: (event: any) => void
+  handleSuggestionClick: (suggestion: string) => any
+  handleEnterPress: (event: any) => any
+  handleChange: (event: any) => any
 }
 
 const Suggestions: React.FC<SuggestionsProps> = ({
@@ -19,6 +19,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({
   handleEnterPress,
   handleChange,
 }) => {
+  console.log(`INPUT VALUE ${inputValue}`)
   useEffect(() => {
     document.addEventListener('keydown', handleEnterPress)
     return () => {

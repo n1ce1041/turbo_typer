@@ -1,0 +1,154 @@
+[
+  {
+    "phrase": "Hello, \n\nThanks for contacting AWS Support. My name is Vili and I will be assisting you today.",
+    "group": "!hi1"
+  },
+  {
+    "phrase": "Hello, \n\nThanks for writing back. I can",
+    "group": "!hi2"
+  },
+  {
+    "phrase": "Hello, \n\nThanks for writing back. My name is Vili and I will be taking over from my colleague, FOOBAR , who is unavailable",
+    "group": "!hi3"
+  },
+  {
+    "phrase": "Thanks for writing back and confirming that for me",
+    "group": "!hi"
+  },
+  {
+    "phrase": "Thanks for writing back and providing that information",
+    "group": "!hi"
+  },
+  {
+    "phrase": "I am taking over from my colleague , , who is currently unavailable",
+    "group": "!hi"
+  },
+  {
+    "phrase": "I understand",
+    "group": ""
+  },
+  {
+    "phrase": "I understand that",
+    "group": ""
+  },
+  {
+    "phrase": "I understand that you’re reaching out today for assistance",
+    "group": ""
+  },
+  {
+    "phrase": "I understand that you’re reaching out today because",
+    "group": ""
+  },
+  {
+    "phrase": "I understand that you have a Lambda function",
+    "group": ""
+  },
+  {
+    "phrase": "I understand that you have an API",
+    "group": ""
+  },
+  {
+    "phrase": "From what I can see",
+    "group": ""
+  },
+  {
+    "phrase": "From what I can observe",
+    "group": ""
+  },
+  {
+    "phrase": "Regarding the",
+    "group": ""
+  },
+  {
+    "phrase": "Regarding your",
+    "group": ""
+  },
+  {
+    "phrase": "Just a kind reminder that",
+    "group": ""
+  },
+  {
+    "phrase": "Kindly note",
+    "group": ""
+  },
+  {
+    "phrase": "In case you haven’t seen it",
+    "group": ""
+  },
+  {
+    "phrase": "Finally",
+    "group": ""
+  },
+  {
+    "phrase": "Firstly",
+    "group": ""
+  },
+  {
+    "phrase": "If you require further guidance",
+    "group": ""
+  },
+  {
+    "phrase": "However, please be aware",
+    "group": ""
+  },
+  {
+    "phrase": "However, please note",
+    "group": ""
+  },
+  {
+    "phrase": "Alternatively",
+    "group": ""
+  },
+  {
+    "phrase": "With that in mind",
+    "group": ""
+  },
+  {
+    "phrase": "With that being said",
+    "group": ""
+  },
+  {
+    "phrase": "I understand that you’re asking about recursive loop protection. I’m happy to put a request in for you on your current account, however, please be aware that recursive loop detection is disabled per-account for a given region. Therefore, when disabled it is disabled for all Lambda functions on a specific region (i.e. us-east-1) for your account. If you’re happy with that, let me know what region(s) you would like to disable on your account. I should be able to get it disabled for you within the day.",
+    "group": "!recurs"
+  },
+  {
+    "phrase": "Here at AWS support, we cannot provide support around resources that are in different accounts. We take your account security personally and have no way to confirm cross-account ownership and access. With that in mind, please open a support case on the account that owns the resources.",
+    "group": "!xacc"
+  },
+  {
+    "phrase": "I have opened a request with our service team. Rest assured, I will update you as soon as I hear back from them. \n\nIn the meanwhile, feel free to reach out if you have any further concerns or queries. \n\nHave a great day ahead! I have put a request through with our internal team. Rest assured, I will update you as soon as I hear back from our team.",
+    "group": "!PAA"
+  },
+  {
+    "phrase": "Just a kind reminder, that here at AWS Support we do not have visibility into your logging. This is for your security. Therefore, please export your logs from CloudWatch. If you need help, please see the following instructions [reference].",
+    "group": "!logs"
+  },
+  {
+    "phrase": "I think a call and a chat over a screenshare would be appropriate. This should expedite investigation and save us from any unnecessary back and forth. Please disclose your number in international format and a good time (Please include your timezone) to call you to organise that. I work from 0900-1700 NZST. Mon - Fri I'd be happy to discuss this over a screenshare with you. Please disclose your number in international format and a good time (Please include your timezone) to call you to organise that. I work from 0900-1700 NZST Mon-Fri",
+    "group": "!cb"
+  },
+  {
+    "phrase": "========================",
+    "group": "!ttl"
+  },
+  {
+    "phrase": "#--------------------snippet------------------------------- \n\n#--------------------end of file ---------------------------",
+    "group": "!cs"
+  },
+  {
+    "phrase": "As agreed, I will be resolving this case now. However, you can always write back if you have any further questions. If you do, the case will be reopened.",
+    "group": "!res"
+  },
+  {
+    "phrase": "As agreed, I will be resolving this case now. However, you can always write back if you have any further questions. If you do, the case will be reopened.",
+    "group": "!res"
+  },
+  {
+    "phrase": "I hope that helps. Let me know if you have any further questions about what we've discussed, and I'll be happy to give you a hand \n\nHave a great day!",
+    "group": "!end"
+  },
+  {
+    "phrase": "I'd be happy to discuss this over a screenshare with you. Please disclose your number in international format and a good time (Please include your timezone) to call you to organise that. I work from 0900-1700 NZST.",
+    "group": "!call"
+  }
+]
