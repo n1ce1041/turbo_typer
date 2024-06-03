@@ -23,7 +23,7 @@ const Suggestions: React.FC<SuggestionsProps> = ({
   useEffect(() => {
     document.addEventListener('keydown', handleEnterPress)
     return () => {
-      document.removeEventListener('keydown', handleEnterPress)
+      null
     }
   }, [suggestions, selectedSuggestionIndex])
 
