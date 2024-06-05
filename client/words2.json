@@ -150,5 +150,9 @@
   {
     "phrase": "I'd be happy to discuss this over a screenshare with you. Please disclose your number in international format and a good time (Please include your timezone) to call you to organise that. I work from 0900-1700 NZST.",
     "group": "!call"
+  },
+  {
+    "phrase": "[1]\n[2]\n[3]\n[4]\n[5]\n[6]",
+    "group": "!refs"
   }
 ]

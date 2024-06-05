@@ -23,13 +23,14 @@ a {
 }
 
 .secondContainer {
+  padding-left: 15rem;
   margin-top: 1.5rem;
   display: flex;
 }
 
 .textArea {
-  height: 45rem;
   flex: 1;
+  padding-right: 1.5rem; /* Adjusted padding */
 }
 
 .textArea textarea {
@@ -41,13 +42,11 @@ a {
 }
 
 .gridElements {
-  padding-left: 1.5rem;
   flex: 1;
   display: grid;
   grid-template-areas:
     'suggestions suggestions'
-    'suggestions suggestions'
-    'allsuggestions allsuggestions';
+    'allsuggestions allsuggestions'; /* Removed the duplicate line */
   gap: 10px;
 }
 
