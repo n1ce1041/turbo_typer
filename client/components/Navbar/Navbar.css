@@ -5,6 +5,7 @@
     background-color: #333; /* Align with the title background color */
     color: #fff; /* Align with the title color */
     padding: 10px 20px; /* Add some padding */
+    margin-bottom: 1rem;
   }
   
   .navbar-menu {

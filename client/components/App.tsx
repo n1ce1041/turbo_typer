@@ -1,10 +1,22 @@
 import Navbar from './Navbar/Navbar'
 import '../main.css'
 import { Outlet, useOutletContext } from 'react-router-dom'
-import React from 'react'
+import React, { useEffect } from 'react'
+import words from '../default.json'
 
 function App() {
-  const [data, setData] = React.useState('hello')
+  const [data, setData] = React.useState(() => {
+    const cachedData = localStorage.getItem('cachedData')
+    return cachedData ? JSON.parse(cachedData) : words
+  })
+
+  useEffect(() => {
+    const cachedData = localStorage.getItem('cachedData')
+    if (cachedData) {
+      setData(JSON.parse(cachedData))
+    }
+  }, [])
+
   return (
     <div className="container">
       <Navbar />

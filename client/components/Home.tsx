@@ -7,13 +7,24 @@ import TextArea from './TextArea/TextArea'
 import Suggestions from './Suggestions/Suggestions'
 import WordsJson from '../words2.json'
 import '../main.css'
+import { useData } from './App'
 
 function App() {
   const [inputValue, setInputValue] = useState('')
   const [suggestions, setSuggestions] = useState<string[]>([])
   const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(0)
+  const { data } = useData()
 
-  let words = WordsJson
+  // let words = WordsJson
+  console.log(data)
+
+  let words
+
+  if (data) {
+    words = data
+  } else {
+    words = WordsJson
+  }
 
   const fuse = new Fuse(words, {
     shouldSort: true,
@@ -133,6 +144,7 @@ function App() {
         case '7':
           shortcutKey = '[7]'
           break
+        // Add more cases for other shortcut keys as needed
         default:
           return
       }
