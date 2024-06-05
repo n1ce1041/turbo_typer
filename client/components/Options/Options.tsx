@@ -68,25 +68,29 @@ const Options = () => {
           onChange={handleInputChange}
           placeholder="Enter S3 URL"
         />
-        <button type="button" onClick={handleTestDownload}>
+        <button className="btn" type="button" onClick={handleTestDownload}>
           Download
         </button>
         <div>
           <label htmlFor="jsonInput">Enter your JSON Data:</label>
-          <textarea
-            id="jsonInput"
-            value={jsonInput}
-            onChange={handleJsonChange}
-            placeholder='[{ "phrase" : "hello", "group" : "weeeeeeee!"}]'
-            rows="10"
-            cols="50"
-          ></textarea>
-          <button type="button" onClick={handleSubmitJson}>
+          <div>
+            <textarea
+              id="jsonInput"
+              value={jsonInput}
+              onChange={handleJsonChange}
+              placeholder='[{ "phrase" : "hello", "group" : "weeeeeeee!"}]'
+              rows="10"
+              cols="50"
+            ></textarea>
+          </div>
+          <button type="button" className="btn" onClick={handleSubmitJson}>
             Submit JSON
           </button>
-          <button type="button" onClick={handleSaveToCache}>
-            Save to Cache
-          </button>
+          <div className="btn-div">
+            <button type="button" onClick={handleSaveToCache}>
+              Save to Cache
+            </button>
+          </div>
         </div>
       </form>
       {data && (

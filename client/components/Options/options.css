@@ -67,4 +67,12 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+
+  .btn {
+    max-width: 15rem;
+  }
+
+  .btn-div {
+    margin-top: 1rem;
+  }
   
