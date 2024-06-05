@@ -124,6 +124,7 @@ function App() {
       let shortcutKey = ''
       switch (event.key) {
         case '1':
+          event.preventDefault()
           shortcutKey = '[1]'
           break
         case '2':
